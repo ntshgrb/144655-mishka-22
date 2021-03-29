@@ -7,11 +7,11 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a class="main-header__logo">
+      <a class="page-header__logo">
         <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
-      <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
       <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-navigation__site site-list">
           <li class="site-list__item">
             <a href="#">Каталог товаров</a>
@@ -22,7 +22,9 @@
         </ul>
         <ul class="main-navigation__user user">
           <li class="user__item">
-            <input class="user__search-form" type="text" value="Поиск по сайту"/>
+            <form method="get">
+              <input class="user__search-form" type="search" value="Поиск по сайту"/>
+            </form>
           </li>
           <li class="user__item">
             <a class="user__cart" href="#">Корзина: пока пуста</a>
@@ -56,8 +58,7 @@
       </section>
 
       <section class="trending-good">
-        <h2 class="visually-hidden">Товар недели</h2>
-        <h3 class="trending-good__title">Вязаные корзинки</h3>
+        <h2 class="trending-good__title">Вязаные корзинки</h2>
         <p class="trending-good__label">Товар недели</p>
         <p class="trending-good__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <dl class="trending-good__details details">
@@ -87,51 +88,49 @@
       </section>
 
       <section class="reviews">
-        <h2 class="visually-hidden">Отзывы покупателей</h2>
-        <h3 class="reviews__title">Отзывы</h3>
-        <ul class="slider">
-          <li class="slider__item">
-            <blockquote class="reviews__item">
-              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="reviews__author-name">Анастасия Красильникова</cite>
-              <p class="reviews__author-id">@misssssiskras</p>
-            </blockquote>
-          </li>
-          <li class="slider__item">
-            <blockquote class="reviews__item">
-              <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
-                и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-                больше лайков!</p>
-              <cite class="reviews__author-name">Екатерина Красильникова</cite>
-              <p class="reviews__author-id">@misssssiskras2</p>
-            </blockquote>
-          </li>
-          <li class="slider__item">
-            <blockquote class="reviews__item">
-              <p class="reviews__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
-                и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
-                больше лайков!</p>
-              <cite class="reviews__author-name">Елена Красильникова</cite>
-              <p class="reviews__author-id">@misssssiskras3</p>
-            </blockquote>
-          </li>
-        </ul>
-        <button class="reviews__prev" type="button" aria-label="Предыдущий отзыв"></button>
-        <button class="reviews__next" type="button" aria-label="Следующий отзыв"></button>
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__list slider">
+
+          <blockquote class="slider__item">
+            <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <cite class="slider__author-name">Анастасия Красильникова</cite>
+            <p class="slider__author-id">@misssssiskras</p>
+          </blockquote>
+
+          <blockquote class="slider__item">
+            <p class="slider__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
+              и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+              больше лайков!</p>
+            <cite class="slider__author-name">Екатерина Красильникова</cite>
+            <p class="slider__author-id">@misssssiskras2</p>
+          </blockquote>
+
+          <blockquote class="slider__item">
+            <p class="slider__text">Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров
+              и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+              больше лайков!</p>
+            <cite class="slider__author-name">Елена Красильникова</cite>
+            <p class="slider__author-id">@misssssiskras3</p>
+          </blockquote>
+
+        </div>
+        <button class="reviews__button reviews__button--prev" type="button" aria-label="Предыдущий отзыв"></button>
+        <button class="reviews__button reviews__button--next" type="button" aria-label="Следующий отзыв"></button>
         <a class="reviews__write button" href="#">Написать</a>
       </section>
 
       <section class="contacts">
-        <h2 class="visually-hidden">Контакты и адрес магазина</h2>
-        <h3 class="contacts__heading">Контакты</h3>
+        <h2 class="contacts__heading">Контакты</h2>
         <dl>
           <dt class="contacts__title">e-mail:</dt>
-          <dd class="contacts__text">info@mimimishkashop.ru</dd>
+          <dd class="contacts__text">
+            <a>info@mimimishkashop.ru</a>
+          </dd>
           <dt class="contacts__title">адрес:</dt>
           <dd class="contacts__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
         </dl>
         <img class="contacts__map" src="img/images/map.png" alt="Расположение магазина Мишка на карте" width="320" height="454">
-        <button class="contacts__write-message" type="button">Напишите нам</button>
+        <a class="contacts__write-message" href="#">Напишите нам</a>
       </section>
 
     </main>
@@ -156,15 +155,15 @@
     </footer>
 
     <section class="popup">
-      <h3 class="popup__title">Добавить в корзину</h3>
+      <h2 class="popup__title">Добавить в корзину</h2>
       <form action="post">
         <p class="popup__text">Выберите размер:</p>
         <input class="popup__option" type="radio" name="size" id="size-s" value="S">
-        <label for="size-s" class="popup_size">S</label>
+        <label for="size-s" class="popup__size">S</label>
         <input class="popup__option" type="radio" name="size" id="size-m" value="M">
-        <label for="size-m" class="popup_size">M</label>
+        <label for="size-m" class="popup__size">M</label>
         <input class="popup__option" type="radio" name="size" id="size-l" value="L">
-        <label for="size-l" class="popup_size">L</label>
+        <label for="size-l" class="popup__size">L</label>
       </form>
       <button class="post__button" type="submit">Добавить</button>
     </section>
