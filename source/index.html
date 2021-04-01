@@ -22,7 +22,7 @@
         </ul>
         <ul class="main-navigation__user user">
           <li class="user__item">
-            <form method="get">
+            <form method="get" action="https://echo.htmlacademy.ru">
               <input class="user__search-form" type="search" value="Поиск по сайту"/>
             </form>
           </li>
@@ -30,7 +30,7 @@
             <a class="user__cart" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
-        <ul class="visually-hidden main-navigation_sub-list sub-list">
+        <ul class="visually-hidden main-navigation__sub-list sub-list">
           <li class="sub-list__item">
             <a href="#">Новые поступления</a>
           </li>
@@ -134,7 +134,7 @@
       </section>
 
     </main>
-    <footer class="page__footer">
+    <footer class="page-footer">
       <ul class="socials">
         <li class="socials__instagram">
           <a href="#">Инстаграм</a>
@@ -156,7 +156,7 @@
 
     <section class="popup">
       <h2 class="popup__title">Добавить в корзину</h2>
-      <form action="post">
+      <form method="post" action="https://echo.htmlacademy.ru" >
         <p class="popup__text">Выберите размер:</p>
         <input class="popup__option" type="radio" name="size" id="size-s" value="S">
         <label for="size-s" class="popup__size">S</label>
