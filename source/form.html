@@ -54,38 +54,66 @@
         <form class="make-order" method="post" action="https://echo.htmlacademy.ru">
           <p class="make-order__lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-          <fieldset class="make-order__fieldset fieldset">
+          <fieldset class="make-`order__fieldset fieldset">
             <legend class="fieldset__title">Тип</legend>
-            <input class="fieldset__radio-input" type="radio" name="type" value="accessory" checked>
-            <label class="fieldset__label fieldset__label--radio">Аксессуар для интерьера</label>
-            <input class="fieldset__radio-input" type="radio" name="type" value="toy">
-            <label class="fieldset__label fieldset__label--radio">Детская игрушка</label>
+            <ul>
+              <li>
+                <input class="fieldset__radio-input" type="radio" name="type" value="accessory" checked>
+                <label class="fieldset__label fieldset__label--radio">Аксессуар для интерьера</label>
+              </li>
+              <li>
+                <input class="fieldset__radio-input" type="radio" name="type" value="toy">
+                <label class="fieldset__label fieldset__label--radio">Детская игрушка</label>
+              </li>
+          </ul>
           </fieldset>
 
           <fieldset class="make-order__fieldset fieldset">
             <legend class="fieldset__title">Цвет</legend>
-            <input class="fieldset__checkbox-input" type="checkbox" name="white" id="white-color" checked>
-            <label class="fieldset__label fieldset__label--checkbox" for="white-color">Белый</label>
-            <input class="fieldset__checkbox-input" type="checkbox" name="grey" id="grey-color" checked>
-            <label class="fieldset__label fieldset__label--checkbox" for="grey-color">Серый</label>
-            <input class="fieldset__checkbox-input" type="checkbox" name="tiffany" id="tiffany-color">
-            <label class="fieldset__label fieldset__label--checkbox" for="tiffany-color">«Тиффани»</label>
-            <input class="fieldset__checkbox-input" type="checkbox" name="black" id="black-color">
-            <label class="fieldset__label fieldset__label--checkbox" for="black-color">Черный</label>
-            <input class="fieldset__checkbox-input" type="checkbox" name="pink" id="pink-color">
-            <label class="fieldset__label fieldset__label--checkbox" for="pink-color">Розовый</label>
-            <input class="fieldset__checkbox-input" type="checkbox" name="orange" id="orange-color">
-            <label class="fieldset__label fieldset__label--checkbox" for="orange-color">Оранжевый</label>
+            <ul>
+              <li>
+                <input class="fieldset__checkbox-input" type="checkbox" name="white" id="white-color" checked>
+                <label class="fieldset__label fieldset__label--checkbox" for="white-color">Белый</label>
+              </li>
+              <li>
+                <input class="fieldset__checkbox-input" type="checkbox" name="grey" id="grey-color" checked>
+                <label class="fieldset__label fieldset__label--checkbox" for="grey-color">Серый</label>
+              </li>
+              <li>
+                <input class="fieldset__checkbox-input" type="checkbox" name="tiffany" id="tiffany-color">
+                <label class="fieldset__label fieldset__label--checkbox" for="tiffany-color">«Тиффани»</label>
+              </li>
+              <li>
+                <input class="fieldset__checkbox-input" type="checkbox" name="black" id="black-color">
+                <label class="fieldset__label fieldset__label--checkbox" for="black-color">Черный</label>
+              </li>
+              <li>
+                <input class="fieldset__checkbox-input" type="checkbox" name="pink" id="pink-color">
+                <label class="fieldset__label fieldset__label--checkbox" for="pink-color">Розовый</label>
+              </li>
+              <li>
+                <input class="fieldset__checkbox-input" type="checkbox" name="orange" id="orange-color">
+                <label class="fieldset__label fieldset__label--checkbox" for="orange-color">Оранжевый</label>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="make-order__fieldset fieldset">
             <legend class="fieldset__title">Фио</legend>
-            <label class="fieldset__label" for="user-name">Имя:</label>
-            <input class="fieldset__user-name" type="text" name="name" id="user-name" placeholder="Введите ваше имя*" required>
-            <label class="fieldset__label" for="user-surname">Фамилия:</label>
-            <input class="fieldset__user-name" type="text" name="surname" id="user-surname" placeholder="Укажите фамилию*" required>
-            <label class="fieldset__label" for="user-patronymic">Отчество:</label>
-            <input class="fieldset__user-name" type="text" name="patronymic" id="user-patronymic" placeholder="Отчество, если желаете">
+            <ul>
+              <li>
+                <label class="fieldset__label" for="user-name">Имя:</label>
+                <input class="fieldset__user-name" type="text" name="name" id="user-name" placeholder="Введите ваше имя*" required>
+              </li>
+              <li>
+                <label class="fieldset__label" for="user-surname">Фамилия:</label>
+                <input class="fieldset__user-name" type="text" name="surname" id="user-surname" placeholder="Укажите фамилию*" required>
+              </li>
+              <li>
+                <label class="fieldset__label" for="user-patronymic">Отчество:</label>
+                <input class="fieldset__user-name" type="text" name="patronymic" id="user-patronymic" placeholder="Отчество, если желаете">
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset class="make-order__fieldset fieldset">
