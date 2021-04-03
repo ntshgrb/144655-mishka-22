@@ -51,47 +51,71 @@
 
       <section class="catalog">
         <ul class="cards">
-          <li class="cards__item card">
-            <a href="#">
-              <img class="card__image" src="img/images/catalog/hare.jpg" width="260" height="195" alt="Вязаный заяц в синем костюме">
-              <h2 class="card__title">Зайчик-попрыгайчик</h2>
-            </a>
-            <p class="card__description">Рост 30 см, вес 200 г</p>
-            <p class="card__price">1 200 руб.</p>
-            <button class="card__button">
-              <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
-            </button>
-          </li>
-          <li class="cards__item card">
-            <a href="#">
-              <img class="card__image" src="img/images/catalog/basket.jpg" width="260" height="195" alt="Бело-оранжевая корзинка">
-              <h2 class="card__title">Корзинка для белья</h2>
-            </a>
-            <p class="card__description">Диаметр 15 см, высота 10 см</p>
-            <p class="card__price">690 руб.</p>
-            <button class="card__button">
-              <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
-            </button>
-          </li>
-          <li class="cards__item card">
-            <a href="#">
-              <img class="card__image" src="img/images/catalog/big-toy-basket.jpg" width="260" height="195" alt="Бело-зеленая корзина с мягкими игрушками">
-              <h2 class="card__title">Большая корзинкадля игрушек</h2>
-            </a>
-            <p class="card__description">Диаметр 30 см, высота 30 см</p>
-            <p class="card__price">1 500 руб.</p>
-            <button class="card__button">
-              <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
-            </button>
+
+          <li class="cards__item">
+            <article class="card">
+              <a href="#">
+                <img class="card__image" src="img/images/catalog/hare.jpg" width="260" height="195" alt="Вязаный заяц в синем костюме">
+              </a>
+              <div class="card__wrap">
+                <a href="#">
+                  <h2 class="card__title">Зайчик-попрыгайчик</h2>
+                </a>
+                <p class="card__description">Рост 30 см, вес 200 г</p>
+                <p class="card__price">1 200 руб.</p>
+                <button class="card__button" type="button">
+                  <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
+                </button>
+              </div>
+            </article>
           </li>
 
+          <li class="cards__item">
+            <article class="card">
+              <a href="#">
+                <img class="card__image" src="img/images/catalog/basket.jpg" width="260" height="195" alt="Бело-оранжевая корзинка">
+              </a>
+              <div class="card__wrap">
+                <a href="#">
+                  <h2 class="card__title">Корзинка для белья</h2>
+                </a>
+                <p class="card__description">Диаметр 15 см, высота 10 см</p>
+                <p class="card__price">690 руб.</p>
+                <button class="card__button" type="button">
+                  <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
+                </button>
+              </div>
+            </article>
+          </li>
+
+          <li class="cards__item">
+            <article class="card">
+              <a href="#">
+                <img class="card__image" src="img/images/catalog/big-toy-basket.jpg" width="260" height="195" alt="Бело-зеленая корзина с мягкими игрушками">
+              </a>
+              <div class="card__wrap">
+                <a>
+                  <h2 class="card__title">Большая корзинкадля игрушек</h2>
+                </a>
+                <p class="card__description">Диаметр 30 см, высота 30 см</p>
+                <p class="card__price">1 500 руб.</p>
+                <button class="card__button" type="button">
+                  <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
+                </button>
+              </div>
+            </article>
+          </li>
         </ul>
       </section>
 
       <section class="workflow">
         <h2 class="workflow__title">Процесс производства</h2>
-        <video class="video" width="260" height="150" src="#" poster="img/images/catalog/video-preview.jpg">
-        </video>
+        <div class="workflow__video-wrap">
+          <img class="workflow__video-prev" src="img/images/catalog/video-preview.jpg" alt="Превью видео: корзинка цвета тиффани"  width="260" height="150">
+          <button class="workflow__button" type="button">
+            <img src="img/images/catalog/play.svg" alt="Кнопка начала проигрывания видео">
+          </button>
+        </div>
         <p class="workflow__lead">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="workflow__button button" href="#">Сделать заказ</a>
       </section>
