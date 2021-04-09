@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body form-page">
+
     <header class="page-header">
       <a href="index.html" class="page-header__logo">
         <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
@@ -22,7 +24,8 @@
         <ul class="main-navigation__user user">
           <li class="user__item">
             <form method="get" action="https://echo.htmlacademy.ru">
-              <input class="user__search-form" type="search" value="Поиск по сайту"/>
+              <input class="user__search-form" type="search" id="search" value="Поиск по сайту"/>
+              <label class="user__search" for="search">Поиск по сайту</label>
             </form>
           </li>
           <li class="user__item">
@@ -54,7 +57,7 @@
         <form class="make-order" method="post" action="https://echo.htmlacademy.ru">
           <p class="make-order__lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-          <fieldset class="make-`order__fieldset fieldset">
+          <fieldset class="make-order__fieldset fieldset">
             <legend class="fieldset__title">Тип</legend>
             <ul>
               <li>
