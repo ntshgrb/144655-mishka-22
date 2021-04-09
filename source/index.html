@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
 
-    <header class="page-header">
+    <header class="page-header container">
       <a class="page-header__logo">
         <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
@@ -23,7 +24,8 @@
         <ul class="main-navigation__user user">
           <li class="user__item">
             <form method="get" action="https://echo.htmlacademy.ru">
-              <input class="user__search-form" type="search" value="Поиск по сайту"/>
+              <input class="user__search-form" type="search" id="search" value="Поиск по сайту"/>
+              <label class="user__search" for="search">Поиск по сайту</label>
             </form>
           </li>
           <li class="user__item">
@@ -46,18 +48,22 @@
       <h1 class="visually-hidden">Интернет-магазин вязаных игрушек "Мишка"</h1>
       <section class="subhead">
         <h2 class="visually-hidden">Ссылки на главные разделы</h2>
-        <h3>Милые штуки ручной работы для дома</h3>
+        <h3 class="subhead__title container">Милые штуки ручной работы для дома</h3>
         <ul class="subhead__list">
-          <li>
-            <a class="subhead__link subhead__link--light" href="#">Предметы интерьера</a>
+          <li class="subhead__item">
+            <a class="subhead__link subhead__link--light" href="#">
+              <p class="subhead__option container">Предметы интерьера</p>
+            </a>
           </li>
-          <li>
-            <a class="subhead__link subhead__link--dark" href="#">Детские игрушки</a>
+          <li class="subhead__item subhead__link--dark">
+            <a class="subhead__link" href="#">
+              <p class="subhead__option container">Детские игрушки</p>
+            </a>
           </li>
         </ul>
       </section>
 
-      <section class="trending-good">
+      <section class="trending-good container">
         <h2 class="trending-good__title">Вязаные корзинки</h2>
         <p class="trending-good__label">Товар недели</p>
         <p class="trending-good__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
@@ -74,20 +80,20 @@
         <button class="trending-good__to-cart button" type="button">Заказать</button>
       </section>
 
-      <section class="about-mishka">
+      <section class="about-mishka container">
         <h2 class="visually-hidden">Информация об интернет-магазине Мишка</h2>
         <h3 class="about-mishka__title">Коротко о нас:</h3>
-        <ul class="about-mishka__features features">
+        <ul class="about-mishka__features features container">
           <li class="features__item features__item--ecological">Экологически чистые материалы</li>
           <li class="features__item features__item--price">Скандинавский стиль по российской цене</li>
           <li class="features__item features__item--likes">Увеличивает лайки на фотографиях</li>
           <li class="features__item features__item--cute">Связано вручную с любовью и умилением</li>
           <li class="features__item features__item--domestic">Поддержка отечественного производителя</li>
-          <li class="features__item--gift">Поставляется в подарочной упаковке</li>
+          <li class="features__item features__item--gift">Поставляется в подарочной упаковке</li>
         </ul>
       </section>
 
-      <section class="reviews">
+      <section class="reviews container">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list slider">
 
@@ -120,22 +126,24 @@
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__heading">Контакты</h2>
-        <dl>
+        <h2 class="contacts__heading container">Контакты</h2>
+        <dl class="contacts__list container">
           <dt class="contacts__title">e-mail:</dt>
           <dd class="contacts__text">
-            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            <a class="contacts__mail-to" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           </dd>
           <dt class="contacts__title">адрес:</dt>
           <dd class="contacts__text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
         </dl>
         <img class="contacts__map" src="img/images/map.png" alt="Расположение магазина Мишка на карте" width="320" height="454">
-        <a class="contacts__write-message button" href="#">Напишите нам</a>
+        <div class="container">
+          <a class="contacts__write-message button" href="#">Напишите нам</a>
+        </div>
       </section>
 
     </main>
     <footer class="page-footer">
-      <ul class="socials">
+      <ul class="socials container">
         <li class="socials__instagram">
           <a href="#">Инстаграм</a>
         </li>
@@ -146,7 +154,7 @@
           <a href="#">Твиттер</a>
         </li>
       </ul>
-      <div class="copyright">
+      <div class="copyright container">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__icon" src="img/icons/htmlacademy.svg" alt="Логотип HTML Academy"/>
@@ -154,18 +162,18 @@
       </div>
     </footer>
 
-    <section class="popup">
+    <section class="popup container">
       <h2 class="popup__title">Добавить в корзину</h2>
       <form method="post" action="https://echo.htmlacademy.ru" >
         <p class="popup__text">Выберите размер:</p>
         <input class="popup__option" type="radio" name="size" id="size-s" value="S">
-        <label for="size-s" class="popup__size">S</label>
+        <label class="popup__size" for="size-s">s</label>
         <input class="popup__option" type="radio" name="size" id="size-m" value="M">
-        <label for="size-m" class="popup__size">M</label>
+        <label class="popup__size" for="size-m">m</label>
         <input class="popup__option" type="radio" name="size" id="size-l" value="L">
-        <label for="size-l" class="popup__size">L</label>
+        <label class="popup__size" for="size-l">l</label>
       </form>
-      <button class="post__button" type="submit">Добавить</button>
+      <button class="popup__button button" type="submit">Добавить</button>
     </section>
   </body>
 </html>
