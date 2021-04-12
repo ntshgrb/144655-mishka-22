@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body form-page">
 
-    <header class="page-header">
+    <header class="page-header container">
       <a href="index.html" class="page-header__logo">
         <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
@@ -15,7 +16,7 @@
         <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-navigation__site site-list">
           <li class="site-list__item">
-            <a href="#">Каталог товаров</a>
+            <a href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
             <a href="#">Вязание на заказ</a>
@@ -47,19 +48,17 @@
     <main class="page-main">
       <h1 class="visually-hidden">Страница оформления заказа</h1>
       <section class="form-subhead">
-        <div class="container">
-          <h2 class="form-subhead__title">Вязание на заказ</h2>
-        </div>
+          <h2 class="form-subhead__title container">Вязание на заказ</h2>
       </section>
 
       <section>
         <h2 class="visually-hidden">Форма для оформления заказа</h2>
         <form class="make-order" method="post" action="https://echo.htmlacademy.ru">
-          <p class="make-order__lead">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <p class="make-order__lead container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-          <fieldset class="make-order__fieldset fieldset">
+          <fieldset class="make-order__fieldset fieldset container">
             <legend class="fieldset__title">Тип</legend>
-            <ul>
+            <ul class="fieldset__list">
               <li>
                 <input class="fieldset__radio-input" type="radio" name="type" value="accessory" checked>
                 <label class="fieldset__label fieldset__label--radio">Аксессуар для интерьера</label>
@@ -71,9 +70,9 @@
           </ul>
           </fieldset>
 
-          <fieldset class="make-order__fieldset fieldset">
+          <fieldset class="make-order__fieldset fieldset container">
             <legend class="fieldset__title">Цвет</legend>
-            <ul>
+            <ul class="fieldset__list">
               <li>
                 <input class="fieldset__checkbox-input" type="checkbox" name="white" id="white-color" checked>
                 <label class="fieldset__label fieldset__label--checkbox" for="white-color">Белый</label>
@@ -101,9 +100,11 @@
             </ul>
           </fieldset>
 
-          <fieldset class="make-order__fieldset fieldset">
+
+
+          <fieldset class="make-order__fieldset fieldset container">
             <legend class="fieldset__title">Фио</legend>
-            <ul>
+            <ul class="fieldset__list">
               <li>
                 <label class="fieldset__label" for="user-name">Имя:</label>
                 <input class="fieldset__user-name" type="text" name="name" id="user-name" placeholder="Введите ваше имя*" required>
@@ -119,28 +120,32 @@
             </ul>
           </fieldset>
 
-          <fieldset class="make-order__fieldset fieldset">
+          <fieldset class="make-order__fieldset fieldset container">
             <legend class="fieldset__title">Телефон</legend>
             <input class="fieldset__user-tel" type="tel" name="tel" pattern="+7[0-9]{3}-[0-9]{3-[0-9]{2}-[0-9]{2}}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </fieldset>
 
-          <fieldset class="make-order__fieldset fieldset">
+          <fieldset class="make-order__fieldset fieldset container">
             <legend class="fieldset__title">E-mail</legend>
             <input class="fieldset__user-email" type="email" name="email" placeholder="Ваш Email*" required>
           </fieldset>
 
-          <fieldset class="make-order__fieldset fieldset">
+          <fieldset class="make-order__fieldset fieldset container">
             <legend class="fieldset__title">Доп</legend>
             <textarea class="fieldset__additional" name="additional-info" cols="30" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
-          <p class="make-order__footnote">*Поля обязательны для заполнения</p>
-          <button class="button make-order__button" type="submit">Отправить заказ</button>
+
+          <div class="container">
+            <p class="make-order__footnote">*Поля обязательны для заполнения</p>
+            <button class="button make-order__button" type="submit">Отправить заказ</button>
+          </div>
+
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
-      <ul class="socials">
+      <ul class="socials container">
         <li class="socials__instagram">
           <a href="#">Инстаграм</a>
         </li>
@@ -151,7 +156,7 @@
           <a href="#">Твиттер</a>
         </li>
       </ul>
-      <div class="copyright">
+      <div class="copyright container">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__icon" src="img/icons/htmlacademy.svg" alt="Логотип HTML Academy"/>

@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body catalog-page">
 
-    <header class="page-header">
-      <a class="page-header__logo">
+    <header class="page-header container">
+      <a href="index.html" class="page-header__logo">
         <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
       <nav class="main-navigation">
@@ -17,13 +19,14 @@
             <a href="#">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Вязание на заказ</a>
+            <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="main-navigation__user user">
           <li class="user__item">
-            <form method="get">
-              <input class="user__search-form" type="search" value="Поиск по сайту"/>
+            <form method="get" action="https://echo.htmlacademy.ru">
+              <input class="user__search-form" type="search" id="search" value="Поиск по сайту"/>
+              <label class="user__search" for="search">Поиск по сайту</label>
             </form>
           </li>
           <li class="user__item">
@@ -44,13 +47,11 @@
 
     <main>
       <section class="catalog-subhead">
-        <div class="container">
-          <h1 class="catalog-subhead__title">Каталог товаров</h1>
-        </div>
+        <h1 class="catalog-subhead__title container">Каталог товаров</h1>
       </section>
 
       <section class="catalog">
-        <ul class="cards">
+        <ul class="cards container">
 
           <li class="cards__item">
             <article class="card">
@@ -94,7 +95,7 @@
                 <img class="card__image" src="img/images/catalog/big-toy-basket.jpg" width="260" height="195" alt="Бело-зеленая корзина с мягкими игрушками">
               </a>
               <div class="card__wrap">
-                <a>
+                <a href="#">
                   <h2 class="card__title">Большая корзинкадля игрушек</h2>
                 </a>
                 <p class="card__description">Диаметр 30 см, высота 30 см</p>
@@ -108,11 +109,11 @@
         </ul>
       </section>
 
-      <section class="workflow">
+      <section class="workflow container">
         <h2 class="workflow__title">Процесс производства</h2>
         <div class="workflow__video-wrap">
           <img class="workflow__video-prev" src="img/images/catalog/video-preview.jpg" alt="Превью видео: корзинка цвета тиффани"  width="260" height="150">
-          <button class="workflow__button" type="button">
+          <button class="workflow__play-button" type="button">
             <img src="img/images/catalog/play.svg" alt="Кнопка начала проигрывания видео">
           </button>
         </div>
@@ -122,7 +123,7 @@
     </main>
 
     <footer class="page-footer">
-      <ul class="socials">
+      <ul class="socials container">
         <li class="socials__instagram">
           <a href="#">Инстаграм</a>
         </li>
@@ -133,7 +134,7 @@
           <a href="#">Твиттер</a>
         </li>
       </ul>
-      <div class="copyright">
+      <div class="copyright container">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__icon" src="img/icons/htmlacademy.svg" alt="Логотип HTML Academy"/>
@@ -141,18 +142,18 @@
       </div>
     </footer>
 
-    <section class="popup">
+    <section class="popup container">
       <h2 class="popup__title">Добавить в корзину</h2>
       <form method="post" action="https://echo.htmlacademy.ru" >
         <p class="popup__text">Выберите размер:</p>
         <input class="popup__option" type="radio" name="size" id="size-s" value="S">
-        <label for="size-s" class="popup__size">S</label>
+        <label class="popup__size" for="size-s">s</label>
         <input class="popup__option" type="radio" name="size" id="size-m" value="M">
-        <label for="size-m" class="popup__size">M</label>
+        <label class="popup__size" for="size-m">m</label>
         <input class="popup__option" type="radio" name="size" id="size-l" value="L">
-        <label for="size-l" class="popup__size">L</label>
+        <label class="popup__size" for="size-l">l</label>
       </form>
-      <button class="post__button" type="submit">Добавить</button>
+      <button class="popup__button button" type="submit">Добавить</button>
     </section>
 </body>
 </html>
