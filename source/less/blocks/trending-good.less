@@ -24,10 +24,11 @@
   color: @aquamarine;
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    text-align: right;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,18 +80,18 @@
 .tranding-good__container {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto auto;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: auto 1fr auto;
   }
 }
 
 .trending-good__img-wrap {
   @media (min-width: @tablet-width) {
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 6;
   }

@@ -8,12 +8,16 @@
   </head>
   <body class="page__body">
 
-    <header class="page-header container">
-      <a class="page-header__logo page-header__logo--inactive">
-        <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
-      </a>
+    <header class="page-header">
       <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
+        <a class="main-navigation__logo main-navigation__logo--inactive">
+          <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+        </a>
+
+        <div class="main-navigation__toggle-wrapper">
+          <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
+        </div>
+
         <ul class="main-navigation__site site-list">
           <li class="site-list__item">
             <a href="catalog.html">Каталог товаров</a>
@@ -24,44 +28,46 @@
         </ul>
         <ul class="main-navigation__user user">
           <li class="user__item">
-            <form method="get" action="https://echo.htmlacademy.ru">
-              <input class="user__search-form" type="search" id="search" value="Поиск по сайту"/>
-              <label class="user__search" for="search">Поиск по сайту</label>
-            </form>
+            <a class="user__search" href="#">
+              <img class="user__search-icon" src="img/icons/search-header.svg" width="18" height="18" alt="Откроется страница поиска по сайту">
+              <span class="user__search-text">Поиск по сайту</span>
+            </a>
           </li>
           <li class="user__item">
+            <img class="user__cart-icon" src="img/icons/catalog-cart.svg" width="21" height="18" alt="Перейти в корзину">
             <a class="user__cart" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
-        <ul class="visually-hidden main-navigation__sub-list sub-list">
+        <ul class="main-navigation__sub-list sub-list">
           <li class="sub-list__item">
-            <a href="#">Новые поступления</a>
+            <a class="sub-list__link" href="#">Новые поступления</a>
           </li>
           <li class="sub-list__item">
-            <a href="#">Распродажа</a>
+            <a class="sub-list__link" href="#">Распродажа</a>
           </li>
         </ul>
         <p class="main-navigation__free-delivery">Бесплатная доставка по России</p>
       </nav>
     </header>
 
+
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин вязаных игрушек "Мишка"</h1>
       <section class="subhead">
         <h2 class="visually-hidden">Ссылки на главные разделы</h2>
         <h3 class="subhead__title container">Милые штуки ручной работы для дома</h3>
-        <div class="subhead__list">
-          <div class="subhead__item subhead__item--light">
+        <ul class="subhead__list">
+          <li class="subhead__item subhead__item--light">
             <a class="subhead__link" href="#">
-              <p class="subhead__option">Предметы интерьера</p>
+              <p class="subhead__option container">Предметы интерьера</p>
             </a>
-          </div>
-          <div class="subhead__item subhead__item--dark">
+          </li>
+          <li class="subhead__item subhead__item--dark">
             <a class="subhead__link" href="#">
-              <p class="subhead__option">Детские игрушки</p>
+              <p class="subhead__option container">Детские игрушки</p>
             </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
 
       <section class="trending-good">
@@ -101,7 +107,7 @@
       <section class="reviews">
         <div class="reviews__wrap container">
           <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__list slider">
+          <div class="reviews__list">
 
             <blockquote class="reviews__item slider">
               <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -142,26 +148,24 @@
             <a class="contacts__mail-to" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           </dd>
           <dt class="contacts__title">адрес:</dt>
-          <dd class="contacts__text">г. Санкт-Петербург ул.&nbspБольшая&nbspКонюшенная д.&nbs19/8,&nbspофис&nbsp101</dd>
+          <dd class="contacts__text">г. Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8,&nbsp;офис&nbsp;101</dd>
         </dl>
         <img class="contacts__map" src="img/images/map.png" alt="Расположение магазина Мишка на карте" width="320" height="454">
-        <div class="container">
-          <a class="contacts__write-message button" href="#">Напишите нам</a>
-        </div>
+        <a class="contacts__write-message button" href="#">Напишите нам</a>
       </section>
 
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
-        <img class="page-footer__logo" src="../img/icons/logo-mishka-footer.svg" alt="Логотип магазина Мишка">
+        <img class="page-footer__logo" src="img/icons/logo-mishka-footer.svg" alt="Логотип магазина Мишка">
         <ul class="socials">
-          <li class="socials__instagram">
+          <li class="socials__item socials__item--instagram">
             <a href="#">Инстаграм</a>
           </li>
-          <li class="socials__facebook">
+          <li class="socials__item socials__item--facebook">
             <a href="#">Фейсбук</a>
           </li>
-          <li class="socials__twitter">
+          <li class="socials__item socials__item--twitter">
             <a href="#">Твиттер</a>
           </li>
         </ul>

@@ -1,22 +1,126 @@
 .main-navigation {
+  position: relative;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   color: @text-bolder;
 
   @media (min-width: @tablet-width) {
+    width: 668px;
+    padding: 0 50px;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
   }
 }
 
+
+.main-navigation__logo {
+  display: block;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-top: 1px solid @lighten-grey;
+  border-bottom: 1px solid @lighten-grey;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    flex-basis: 200px;
+    text-align: start;
+    padding-top: 20px;
+  }
+}
+
+.main-navigation__logo--inactive {
+  pointer-events: none;
+}
+
+.main-navigation__toggle-wrapper {
+  position: absolute;
+  top: 22px;
+  right: 31px;
+  height: 30px;
+}
+
 .main-navigation__toggle {
+  position: relative;
+  display: block;
+  right: 0;
+  top: 0;
+  border: none;
+  background: none;
+  height: 2px;
+  width: 20px;
+  background-color: @ink;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+.main-navigation__toggle::before,
+.main-navigation__toggle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 20px;
+  background-color: @ink;
+  right: 0;
+  top: 10px;
+}
+
+.main-navigation__toggle::after {
+  top: 5px;
+}
+
+
+.main-navigation__site {
+  @media (min-width: @tablet-width) {
+    order: 4;
+    flex-basis: 405px;
+    position: absolute;
+    top: 100%;
+    left: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    order: -1;
+  }
+}
+
 .main-navigation__free-delivery {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @text;
+  margin-top: 20px;
+
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    position: absolute;
+    top: 100%;
+    right: 45px;
+  }
+}
+
+.main-navigation__sub-list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 45px;
   }
 }
