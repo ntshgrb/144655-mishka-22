@@ -1,5 +1,12 @@
 .fieldset {
   border: none;
+  border-top: 1px solid @aqua;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    border: none;
+  }
 }
 
 .fieldset__title {
@@ -9,12 +16,23 @@
   line-height: 16px;
   font-weight: 700;
   margin-bottom: 28px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .fieldset__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 180px;
+  }
 }
 
 .fieldset__label {
@@ -45,8 +63,42 @@
   padding-top: 17px;
   padding-bottom: 17px;
   margin-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
 }
 
 .fieldset__additional {
+  box-sizing: border-box;
   padding: 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.fieldset__list--checkbox {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.fieldset__label--checkbox {
+  @media (min-width: @tablet-width) {
+    min-width: 180px;
+  }
+}
+
+.fieldset__full-name {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.fieldset__user-name {
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+  }
 }
