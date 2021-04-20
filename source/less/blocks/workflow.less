@@ -1,5 +1,19 @@
 .workflow {
   padding-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "picture title"
+      "picture lead"
+      "picture button";
+  }
 }
 
 .workflow__title {
@@ -9,6 +23,10 @@
   line-height: 24px;
   font-weight: 700;
   color: @text-bolder;
+
+  @media (min-width: @desktop-width) {
+    grid-area: title;
+  }
 }
 
 .workflow__title::before {
@@ -21,20 +39,44 @@
   background-position: 0 0;
 }
 
-.workflow__video-prev {
+.workflow__video-wrap {
+  display: inline-block;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: picture;
+  }
+}
+
+.workflow__video-prev {
+  display: flex;
 }
 
 .workflow__play-button {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   background-color: transparent;
   border: none;
 }
 
 .workflow__lead {
   margin-bottom: 41px;
+
+  @media (min-width: @desktop-width) {
+    grid-area: lead;
+  }
 }
 
 .workflow__button {
   margin-bottom: 90px;
+
+  @media (min-width: @desktop-width) {
+    grid-area: button;
+  }
 }
