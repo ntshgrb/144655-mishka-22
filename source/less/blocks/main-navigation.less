@@ -1,22 +1,122 @@
 .main-navigation {
+  position: relative;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   color: @text-bolder;
 
   @media (min-width: @tablet-width) {
+    width: 668px;
+    padding: 0 50px;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
   }
 }
 
+
+.main-navigation__logo {
+  display: block;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-top: 1px solid @lighten-grey;
+  border-bottom: 1px solid @lighten-grey;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    text-align: start;
+    padding-top: 20px;
+  }
+}
+
+.main-navigation__logo--inactive {
+  pointer-events: none;
+}
+
+.main-navigation__toggle-wrapper {
+  position: absolute;
+  top: 22px;
+  right: 31px;
+  height: 20px;
+  width: 20px;
+}
+
 .main-navigation__toggle {
+  position: relative;
+  display: block;
+  border: none;
+  background: none;
+  height: 20px;
+  width: 20px;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+.main-navigation__toggle-icon,
+.main-navigation__toggle-icon::before,
+.main-navigation__toggle-icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 20px;
+  background-color: @ink;
+  right: 0;
+}
+
+.main-navigation__toggle-icon {
+  top: calc(50% - 2px);
+}
+
+.main-navigation__toggle-icon::after {
+  top: 4px;
+}
+
+.main-navigation__toggle-icon::before {
+  top: -4px;
+}
+
+.main-navigation__site {
+  @media (min-width: @tablet-width) {
+    order: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: -1;
+  }
+}
+
 .main-navigation__free-delivery {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @text;
+  margin-top: 20px;
+
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    top: 100%;
+    right: 45px;
+  }
+}
+
+.main-navigation__sub-list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
   }
 }

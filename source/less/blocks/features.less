@@ -2,9 +2,17 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
+  color: @text-bolder;
   margin-bottom: 83px;
 }
 
 .features__item:last-child {
   margin-bottom: 55px;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    column-count: 2;
+    column-gap: 70px;
+  }
 }

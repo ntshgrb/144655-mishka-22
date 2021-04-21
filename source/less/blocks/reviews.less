@@ -6,6 +6,41 @@
   color: @text-bolder;
 }
 
+.reviews__item {
+  margin: 0;
+  line-height: 30px;
+}
+
 .reviews__write {
   margin-bottom: 45px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reviews__write {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .reviews__list {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .reviews__buttons {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    align-self: end;
+    justify-self: end;
+  }
 }

@@ -1,5 +1,17 @@
 .popup {
+  width: 260px;
   padding-top: 27px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 0 auto;
+  border: 1px solid @silver;
+  box-shadow: 0 5px 10px @black-opacity;
+
+  @media (min-width: @tablet-width) {
+    width: 566px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 
 .popup__title {
@@ -15,6 +27,15 @@
   line-height: 30px;
   margin-bottom: 21px;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .popup__options-list {
+    width: 380px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .popup__option {
@@ -38,10 +59,13 @@
 }
 
 .popup__button {
+  display: block;
   background-color: @aquamarine;
   color: @white;
   border: none;
   font-size: 17px;
   line-height: 16px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 64px;
 }
