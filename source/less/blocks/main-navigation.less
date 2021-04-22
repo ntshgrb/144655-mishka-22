@@ -6,17 +6,13 @@
   color: @text-bolder;
 
   @media (min-width: @tablet-width) {
-    width: 668px;
+    max-width: @container-size-l;
     padding: 0 50px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1050px;
   }
 }
 
@@ -108,8 +104,7 @@
 
   @media (min-width: @tablet-width) {
     order: 5;
-    top: 100%;
-    right: 45px;
+    margin-left: auto;
   }
 }
 
@@ -118,5 +113,15 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+  }
+}
+
+.main-navigation__user {
+  @media (min-width: @tablet-width) {
+    width: 70%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
   }
 }

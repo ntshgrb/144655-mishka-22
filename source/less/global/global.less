@@ -10,7 +10,7 @@
   clip-path: inset(100%);
   overflow: hidden;
 }
-
+/*
 .container {
   width: 260px;
   padding: 0 30px;
@@ -26,6 +26,16 @@
     width: 1050px;
     padding: 0 50px;
     margin: 0 auto;
+  }
+}*/
+
+.container {
+  padding: 0 30px;
+  max-width: @container-size-l;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
   }
 }
 

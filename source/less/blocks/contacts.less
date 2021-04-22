@@ -37,16 +37,29 @@
 }
 
 .contacts__title {
-  flex-basis: 70px;
+  width: 25%;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+  }
 }
 
 .contacts__text {
   margin-left: 5px;
-  flex-basis: 180px;
+  width: 73%;
+
+  @media (min-width: @tablet-width) {
+    width: 30%;
+  }
 }
 
 .contacts__mail-to {
   color: @text;
+  width: 73%;
+
+  @media (min-width: @tablet-width) {
+    width: 30%;
+  }
 }
 
 .contacts__write-message {

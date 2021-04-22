@@ -74,7 +74,14 @@
 }
 
 .trending-good__to-cart {
+  display: block;
   margin-bottom: 36px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    justify-self: center;
+  }
 }
 
 .tranding-good__container {
@@ -86,6 +93,11 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: auto 1fr auto;
   }
+}
+
+.trending-good__image {
+  display: block;
+  margin: 0 auto;
 }
 
 .trending-good__img-wrap {

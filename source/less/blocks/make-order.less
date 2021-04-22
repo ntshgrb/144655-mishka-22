@@ -1,3 +1,13 @@
+.make-order {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .make-order__wrapper--grey-bg {
   @media (min-width: @tablet-width) {
     background-color: @background-dec;
@@ -31,9 +41,10 @@
   }
 }
 
-
 .make-order__bottom-wrapper {
   @media (min-width: @tablet-width) {
+    padding-right: 50px;
+    padding-left: 50px;
     display: flex;
     justify-content: space-between;
   }
