@@ -60,36 +60,52 @@
 }
 
 .main-navigation--closed .main-navigation__toggle-icon {
-  position: absolute;
-  content: "";
+  position: relative;
   display: block;
   width: 20px;
   height: 2px;
   background-color: @ink;
-  top: 0;
-  left: 0;
-  box-shadow: 0 4px 0 0 @ink, 0 8px 0 0 @ink;
-}
+  transition: all, 0.5s;
 
-.main-navigation--opened .main-navigation__toggle {
-  &::before,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: @ink;
+    left: 0;
+    top: -8px;
+  }
+
   &::after {
     position: absolute;
     content: "";
-    display: block;
     width: 20px;
     height: 2px;
-    top: 8px;
-    left: 0;
     background-color: @ink;
+    left: 0;
+    top: 8px;
   }
+}
+
+.main-navigation--opened .main-navigation__toggle-icon {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: @ink;
+  transform: rotate(45deg);
+  transition: all, 0.5s;
 
   &::before {
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    transform: rotate(-45deg);
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: @ink;
+    left: 0;
+    top: 0;
+    transform: rotate(85deg);
   }
 }
 
