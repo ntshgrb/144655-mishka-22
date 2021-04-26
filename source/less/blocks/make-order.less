@@ -1,3 +1,19 @@
+.make-order {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.make-order__colored-background {
+  @media (min-width: @tablet-width) {
+    background-color: @background-dec;
+  }
+}
+
 .make-order__lead {
   font-size: 13px;
   padding-top: 17px;
@@ -15,4 +31,21 @@
 
 .make-order__button {
   margin-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 175px;
+  }
+}
+
+.make-order__bottom-wrapper {
+  @media (min-width: @tablet-width) {
+    padding-right: 50px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

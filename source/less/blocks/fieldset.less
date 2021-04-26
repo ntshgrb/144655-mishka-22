@@ -1,5 +1,12 @@
 .fieldset {
   border: none;
+  border-top: 1px solid @aqua;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    padding: 50px;
+  }
 }
 
 .fieldset__title {
@@ -9,12 +16,24 @@
   line-height: 16px;
   font-weight: 700;
   margin-bottom: 28px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    float: left;
+  }
 }
 
 .fieldset__list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.fieldset__list,
+.filedset__wrapper-info {
+  @media (min-width: @tablet-width) {
+    padding-left: 180px;
+  }
 }
 
 .fieldset__label {
@@ -26,27 +45,158 @@
 
 .fieldset__radio-input,
 .fieldset__checkbox-input {
-  display: none;
+  position: absolute;
+  appearance: none;
 }
 
 .fieldset__label--radio,
 .fieldset__label--checkbox {
+  position: relative;
   padding-left: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 15px;
+  padding-top: 15px;
   display: inline-block;
+  cursor: pointer;
 }
 
-.fieldset__user-name,
-.fieldset__user-tel,
-.fieldset__user-email {
+.fieldset__label--radio::before,
+.fieldset__label--checkbox::before {
+  position: absolute;
+  content: "";
+  background-color: transparent;
+  border: 2px solid @slate;
+}
+
+.fieldset__label--radio::before {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+
+  @media (min-width: @desktop-width) {
+    width: 52px;
+    height: 52px;
+    top: -10px;
+  }
+}
+
+
+.fieldset__label--checkbox::before {
+  width: 38px;
+  height: 38px;
+  top: 0;
+  left: 0;
+
+  @media (min-width: @desktop-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.fieldset__radio-input:checked + .fieldset__label--radio::after {
+  position: absolute;
+  content: "";
+  background-color: @aqua;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  left: 14px;
+  top: 15px;
+}
+
+.fieldset__checkbox-input:checked + .fieldset__label--checkbox::after {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 23px;
+  top: 9px;
+  left: 5px;
+  background-image: url("../img/icons/checkbox-tick.svg");
+  background-repeat: no-repeat;
+}
+
+.fieldset__radio-input:hover + .fieldset__label--radio::before,
+.fieldset__checkbox-input:hover + .fieldset__label--checkbox::before {
+  border-color: @aqua;
+}
+
+.fieldset__radio-input:active + .fieldset__label--radio::before,
+.fieldset__checkbox-input:active + .fieldset__label--checkbox::before {
+  border-color: @black-opacity-light;
+}
+
+.fieldset__radio-input:focus + .fieldset__label--radio,
+.fieldset__checkbox-input:focus + .fieldset__label--checkbox {
+  outline: 1px solid @black-opacity-light;
+}
+
+.fieldset__checkbox-input:focus + .fieldset__label--checkbox::before,
+.fieldset__radio-input:focus + .fieldset__label--radio::before {
+  border-color: @slate;
+}
+
+.fieldset__radio-input:disabled + .fieldset__label--radio,
+.fieldset__checkbox-input:disabled + .fieldset__label--checkbox {
+  color: @black-opacity-light;
+}
+
+.fieldset__radio-input:disabled + .fieldset__label--radio::before,
+.fieldset__checkbox-input:disabled + .fieldset__label--checkbox::before {
+  border-color: @black-opacity-light;
+}
+
+
+.fieldset__label--checkbox {
+  @media (min-width: @tablet-width) {
+    min-width: 150px;
+  }
+}
+
+
+.fieldset__list--checkbox {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.fieldset__user-info {
   display: block;
   border: none;
   box-shadow: inset 0 -2px 0 @black;
   padding-top: 17px;
   padding-bottom: 17px;
   margin-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+  }
+}
+
+.fieldset--data {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
 }
 
 .fieldset__additional {
+  box-sizing: border-box;
   padding: 17px;
+  width: 100%;
+}
+
+.fieldset__full-name {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
 }

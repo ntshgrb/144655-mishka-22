@@ -1,4 +1,3 @@
-
 .card__title {
   font-size: 17px;
   line-height: 24px;
@@ -10,6 +9,10 @@
 .card__description {
   font-size: 13px;
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
 }
 
 .card__price {
@@ -22,4 +25,28 @@
 .card__button {
   background-color: transparent;
   border: none;
+  margin-left: auto;
+}
+
+.card {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.card__wrap {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    padding-left: 10px;
+  }
+}
+
+.card__footer {
+  display: flex;
 }

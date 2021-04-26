@@ -60,82 +60,92 @@
             <legend class="fieldset__title">Тип</legend>
             <ul class="fieldset__list">
               <li>
-                <input class="fieldset__radio-input" type="radio" name="type" value="accessory" checked>
-                <label class="fieldset__label fieldset__label--radio">Аксессуар для интерьера</label>
+                <input class="fieldset__radio-input" type="radio" name="type" value="accessory" id="accessory" checked>
+                <label class="fieldset__label fieldset__label--radio" for="accessory">Аксессуар для интерьера</label>
               </li>
               <li>
-                <input class="fieldset__radio-input" type="radio" name="type" value="toy">
-                <label class="fieldset__label fieldset__label--radio">Детская игрушка</label>
+                <input class="fieldset__radio-input" type="radio" name="type" value="toy" id="toy">
+                <label class="fieldset__label fieldset__label--radio" for="toy">Детская игрушка</label>
               </li>
           </ul>
           </fieldset>
 
-          <fieldset class="make-order__fieldset fieldset container">
-            <legend class="fieldset__title">Цвет</legend>
-            <ul class="fieldset__list">
-              <li>
-                <input class="fieldset__checkbox-input" type="checkbox" name="white" id="white-color" checked>
-                <label class="fieldset__label fieldset__label--checkbox" for="white-color">Белый</label>
-              </li>
-              <li>
-                <input class="fieldset__checkbox-input" type="checkbox" name="grey" id="grey-color" checked>
-                <label class="fieldset__label fieldset__label--checkbox" for="grey-color">Серый</label>
-              </li>
-              <li>
-                <input class="fieldset__checkbox-input" type="checkbox" name="tiffany" id="tiffany-color">
-                <label class="fieldset__label fieldset__label--checkbox" for="tiffany-color">«Тиффани»</label>
-              </li>
-              <li>
-                <input class="fieldset__checkbox-input" type="checkbox" name="black" id="black-color">
-                <label class="fieldset__label fieldset__label--checkbox" for="black-color">Черный</label>
-              </li>
-              <li>
-                <input class="fieldset__checkbox-input" type="checkbox" name="pink" id="pink-color">
-                <label class="fieldset__label fieldset__label--checkbox" for="pink-color">Розовый</label>
-              </li>
-              <li>
-                <input class="fieldset__checkbox-input" type="checkbox" name="orange" id="orange-color">
-                <label class="fieldset__label fieldset__label--checkbox" for="orange-color">Оранжевый</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="make-order__colored-background">
+            <fieldset class="make-order__fieldset fieldset container">
+              <legend class="fieldset__title">Цвет</legend>
+              <ul class="fieldset__list fieldset__list--checkbox">
+                <li>
+                  <input class="fieldset__checkbox-input" type="checkbox" name="white" id="white-color" checked>
+                  <label class="fieldset__label fieldset__label--checkbox" for="white-color">Белый</label>
+                </li>
+                <li>
+                  <input class="fieldset__checkbox-input" type="checkbox" name="grey" id="grey-color" checked>
+                  <label class="fieldset__label fieldset__label--checkbox" for="grey-color">Серый</label>
+                </li>
+                <li>
+                  <input class="fieldset__checkbox-input" type="checkbox" name="tiffany" id="tiffany-color">
+                  <label class="fieldset__label fieldset__label--checkbox" for="tiffany-color">«Тиффани»</label>
+                </li>
+                <li>
+                  <input class="fieldset__checkbox-input" type="checkbox" name="black" id="black-color">
+                  <label class="fieldset__label fieldset__label--checkbox" for="black-color">Черный</label>
+                </li>
+                <li>
+                  <input class="fieldset__checkbox-input" type="checkbox" name="pink" id="pink-color">
+                  <label class="fieldset__label fieldset__label--checkbox" for="pink-color">Розовый</label>
+                </li>
+                <li>
+                  <input class="fieldset__checkbox-input" type="checkbox" name="orange" id="orange-color">
+                  <label class="fieldset__label fieldset__label--checkbox" for="orange-color">Оранжевый</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
 
 
           <fieldset class="make-order__fieldset fieldset container">
             <legend class="fieldset__title">Фио</legend>
             <ul class="fieldset__list">
-              <li>
+              <li class="fieldset__full-name">
                 <label class="fieldset__label" for="user-name">Имя:</label>
-                <input class="fieldset__user-name" type="text" name="name" id="user-name" placeholder="Введите ваше имя*" required>
+                <input class="fieldset__user-info" type="text" name="name" id="user-name" placeholder="Введите ваше имя*" required>
               </li>
-              <li>
+              <li class="fieldset__full-name">
                 <label class="fieldset__label" for="user-surname">Фамилия:</label>
-                <input class="fieldset__user-name" type="text" name="surname" id="user-surname" placeholder="Укажите фамилию*" required>
+                <input class="fieldset__user-info" type="text" name="surname" id="user-surname" placeholder="Укажите фамилию*" required>
               </li>
-              <li>
+              <li class="fieldset__full-name">
                 <label class="fieldset__label" for="user-patronymic">Отчество:</label>
-                <input class="fieldset__user-name" type="text" name="patronymic" id="user-patronymic" placeholder="Отчество, если желаете">
+                <input class="fieldset__user-info" type="text" name="patronymic" id="user-patronymic" placeholder="Отчество, если желаете">
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="make-order__fieldset fieldset container">
-            <legend class="fieldset__title">Телефон</legend>
-            <input class="fieldset__user-tel" type="tel" name="tel" pattern="+7[0-9]{3}-[0-9]{3-[0-9]{2}-[0-9]{2}}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-          </fieldset>
+          <div class="make-order__colored-background">
+            <fieldset class="make-order__fieldset fieldset fieldset--data container">
+              <legend class="fieldset__title">Телефон</legend>
+              <div class="filedset__wrapper-info">
+                <input class="fieldset__user-info" type="tel" name="tel" pattern="+7[0-9]{3}-[0-9]{3-[0-9]{2}-[0-9]{2}}" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+              </div>
+              </fieldset>
 
-          <fieldset class="make-order__fieldset fieldset container">
-            <legend class="fieldset__title">E-mail</legend>
-            <input class="fieldset__user-email" type="email" name="email" placeholder="Ваш Email*" required>
-          </fieldset>
+            <fieldset class="make-order__fieldset fieldset fieldset--data container">
+              <legend class="fieldset__title">e-mail</legend>
+              <div class="filedset__wrapper-info">
+                <input class="fieldset__user-info" type="email" name="email" placeholder="Ваш Email*" required>
+              </div>
+              </fieldset>
+          </div>
 
           <fieldset class="make-order__fieldset fieldset container">
             <legend class="fieldset__title">Доп</legend>
-            <textarea class="fieldset__additional" name="additional-info" cols="30" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
+            <div class="filedset__wrapper-info">
+              <textarea class="fieldset__additional" name="additional-info" cols="30" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
+            </fieldset>
 
-          <div class="container">
+          <div class="make-order__bottom-wrapper">
             <p class="make-order__footnote">*Поля обязательны для заполнения</p>
             <button class="button make-order__button" type="submit">Отправить заказ</button>
           </div>

@@ -6,17 +6,13 @@
   color: @text-bolder;
 
   @media (min-width: @tablet-width) {
-    width: 668px;
+    max-width: @container-size-l;
     padding: 0 50px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1050px;
   }
 }
 
@@ -46,6 +42,10 @@
   right: 31px;
   height: 20px;
   width: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-navigation__toggle {
@@ -53,36 +53,102 @@
   display: block;
   border: none;
   background: none;
+  cursor: pointer;
   height: 20px;
   width: 20px;
+  padding: 0;
+}
 
-  @media (min-width: @tablet-width) {
-    display: none;
+.main-navigation--closed .main-navigation__toggle-icon {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: @ink;
+  transition: all, 0.5s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: @ink;
+    left: 0;
+    top: -8px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: @ink;
+    left: 0;
+    top: 8px;
   }
 }
 
-.main-navigation__toggle-icon,
-.main-navigation__toggle-icon::before,
-.main-navigation__toggle-icon::after {
-  content: "";
-  position: absolute;
+.main-navigation--opened .main-navigation__toggle-icon {
+  position: relative;
   display: block;
-  height: 2px;
   width: 20px;
+  height: 2px;
   background-color: @ink;
-  right: 0;
+  transform: rotate(45deg);
+  transition: all, 0.5s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: @ink;
+    left: 0;
+    top: 0;
+    transform: rotate(85deg);
+  }
 }
 
-.main-navigation__toggle-icon {
-  top: calc(50% - 2px);
-}
+@media (max-width: @mobile-width-only) {
+  .main-navigation--closed .main-navigation {
+    &__site,
+    &__user {
+      display: none;
+    }
+  }
 
-.main-navigation__toggle-icon::after {
-  top: 4px;
-}
+  .main-navigation--nojs .main-navigation__toggle-wrapper {
+    display: none;
+  }
 
-.main-navigation__toggle-icon::before {
-  top: -4px;
+  .main-navigation--nojs .main-navigation {
+    &__site,
+    &__user {
+      display: block;
+    }
+  }
+
+  .main-navigation--opened .main-navigation {
+    &__site {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 5;
+      background-color: @white;
+    }
+
+    &__user {
+      position: absolute;
+      top: 283%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 5;
+      background-color: @white;
+    }
+  }
 }
 
 .main-navigation__site {
@@ -108,8 +174,7 @@
 
   @media (min-width: @tablet-width) {
     order: 5;
-    top: 100%;
-    right: 45px;
+    margin-left: auto;
   }
 }
 
@@ -118,5 +183,15 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
+  }
+}
+
+.main-navigation__user {
+  @media (min-width: @tablet-width) {
+    width: 70%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
   }
 }
