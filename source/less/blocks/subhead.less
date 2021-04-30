@@ -3,16 +3,35 @@
   margin-bottom: 30px;
 }
 
-.subhead__title {
-  font-size: 27px;
-  font-weight: 700;
-  line-height: 30px;
-  color: @text-bolder;
+.subhead__top-wrapper {
   padding-top: 73px;
-  padding-bottom: 120px;
-  text-align: center;
+  min-height: 283px;
   background-image: url("../img/images/subhead.jpg");
   background-repeat: no-repeat;
+  background-position: center -10px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/images/subhead@2x.jpg");
+    background-size: 320px auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 100px;
+    min-height: 445px;
+    background-image: url("../img/images/subhead-desktop.jpg");
+    background-position: center -77px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/images/subhead-desktop@2x.jpg");
+      background-size: 768px auto;
+    }
+  }
+}
+
+.subhead__title {
+  .subhead-title;
+  color: @text-bolder;
+  text-align: center;
 }
 
 .subhead__item--light {

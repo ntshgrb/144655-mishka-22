@@ -1,3 +1,14 @@
+.trending-good {
+  background-image: url("../img/images/zigzag-line-desktop.svg");
+  padding-bottom: 50px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 60px;
+  }
+}
+
 .trending-good__title {
   font-size: 25px;
   line-height: 30px;
@@ -87,7 +98,7 @@
 .tranding-good__container {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 50% auto auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -106,6 +117,7 @@
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 6;
+    justify-self: end;
   }
 
   @media (min-width: @desktop-width) {

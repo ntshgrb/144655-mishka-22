@@ -1,4 +1,11 @@
 .contacts {
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    background-image: url("../img/images/zigzag-line-desktop.svg");
+    background-repeat: repeat-x;
+    background-position-y: 23px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 1050px;
     padding: 0 50px;
@@ -74,12 +81,9 @@
   }
 }
 
-.contacts__map {
-  display: block;
-  width: 100%;
+.cotacts__map-container {
+  position: relative;
   margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media (min-width: @desktop-width) {
     width: 527px;
@@ -90,3 +94,16 @@
     margin-bottom: 0;
   }
 }
+
+.contacts__map-iframe {
+  width: 100%;
+}
+
+.contacts__map {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+

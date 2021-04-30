@@ -1,3 +1,17 @@
+.reviews {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/images/review-background.jpg");
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/images/review-background@2x.jpg");
+      background-size: 350px auto;
+    }
+  }
+}
+
 .reviews__title {
   font-size: 25px;
   line-height: 30px;
@@ -26,6 +40,7 @@
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    justify-self: end;
   }
 
   .reviews__list {
@@ -44,3 +59,14 @@
     justify-self: end;
   }
 }
+
+.reviews__button {
+  border: 1px solid @lighten-grey;
+  background-color: transparent;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 37px;
+  padding-right: 38px;
+  margin-bottom: 38px;
+}
+
