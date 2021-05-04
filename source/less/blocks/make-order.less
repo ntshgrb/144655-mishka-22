@@ -5,6 +5,7 @@
   @media (min-width: @tablet-width) {
     padding-right: 0;
     padding-left: 0;
+    padding-top: 50px;
   }
 }
 
@@ -18,19 +19,34 @@
   font-size: 13px;
   padding-top: 17px;
   padding-bottom: 29px;
-}
+  max-width: 700px;
+  margin: 0 auto;
 
-.make-order__fieldset {
-  margin-bottom: 33px;
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+  }
 }
 
 .make-order__footnote {
   font-size: 14px;
   line-height: 16px;
+  margin-top: 11px;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .make-order__button {
   margin-bottom: 55px;
+  font-size: 17px;
+  line-height: 16px;
 
   @media (min-width: @tablet-width) {
     order: -1;

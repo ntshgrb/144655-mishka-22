@@ -3,29 +3,75 @@
   line-height: 24px;
   font-weight: 700;
   color: @text-bolder;
+  margin-top: 0;
   margin-bottom: 6px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.card__title:hover {
+  color: fade(@text-bolder, 60%);
+}
+
+.card__title:active {
+  color: fade(@text-bolder, 30%);
 }
 
 .card__description {
   font-size: 13px;
   line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
     flex-grow: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
   }
 }
 
 .card__price {
+  margin: 0;
   font-size: 15px;
   line-height: 24px;
   font-weight: 700;
   color: @text-bolder;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .card__button {
   background-color: transparent;
   border: none;
   margin-left: auto;
+  cursor: pointer;
+}
+
+.card__cart-icon {
+  fill: @black;
+  opacity: 0.2;
+  position: relative;
+  top: -4px;
+  right: -7px;
+}
+
+.card__cart-icon:hover {
+  fill: @aquamarine;
+  opacity: 1;
+}
+
+.card__cart-icon:active {
+  fill: @aquamarine;
+  opacity: 0.3;
 }
 
 .card {
@@ -38,15 +84,56 @@
   }
 }
 
+.card:hover .card__wrap {
+  box-shadow: 0 6px 10px @black-light;
+}
+
+.card:active .card__wrap {
+  box-shadow: 0 3px 5px @black-light;
+}
+
+
 .card__wrap {
+  box-sizing: border-box;
+  padding-right: 28px;
+  padding-left: 28px;
+  padding-top: 27px;
+  transition: all 0.2s ease-in-out;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    min-width: 50%;
-    padding-left: 10px;
+    width: 50%;
+    padding-left: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 197px;
+    width: 100%;
+    padding-left: 28px;
   }
 }
 
 .card__footer {
   display: flex;
+  border-top: 1px solid @lighten-grey;
+  padding-top: 26px;
+  padding-bottom: 24px;
+}
+
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__picture-link {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
