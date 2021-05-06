@@ -6,6 +6,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     font-size: 15px;
+    flex-wrap: wrap;
+    width: 65%;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,4 +44,12 @@
     border-right: solid 1px fade(@black, 10%);
     padding-right: 38px;
   }
+}
+
+.site-list__link:hover {
+  color: fade(@black, 60%);
+}
+
+.site-list__link:active {
+  color: fade(@black, 30%);
 }
