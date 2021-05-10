@@ -2,6 +2,7 @@
   display: inline-block;
   box-sizing: border-box;
   font-size: 18px;
+  line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
   width: 260px;
@@ -11,4 +12,21 @@
   background-color: @white;
   color: @text;
   border: solid 2px @slate;
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    font-size: 17px;
+  }
+}
+
+.button:hover {
+  background-color: @slate;
+  color: @white;
+}
+
+.button:active {
+  color: @white-opacity;
 }

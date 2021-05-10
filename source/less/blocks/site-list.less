@@ -6,6 +6,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     font-size: 15px;
+    flex-wrap: wrap;
+    width: 65%;
   }
 
   @media (min-width: @desktop-width) {
@@ -26,7 +28,7 @@
   @media (min-width: @tablet-width) {
     padding-left: 0;
     border: none;
-    margin-right: 10px;
+    margin-right: 37px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -39,7 +41,15 @@
 
 .site-list__item:not(:last-child) {
   @media (min-width: @desktop-width) {
-    border-right: solid 1px fade(@black, 10%);
-    padding-right: 38px;
+    border-right: solid 1px @black-fade;
+    padding-right: 34px;
   }
+}
+
+.site-list__link:hover {
+  color: @black-bright;
+}
+
+.site-list__link:active {
+  color: @black-opacity-light;
 }

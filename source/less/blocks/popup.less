@@ -1,6 +1,6 @@
 .popup {
   width: 260px;
-  padding-top: 27px;
+  padding-top: 30px;
   padding-right: 30px;
   padding-left: 30px;
   margin: 0 auto;
@@ -8,9 +8,10 @@
   box-shadow: 0 5px 10px @black-opacity;
 
   @media (min-width: @tablet-width) {
-    width: 566px;
+    width: 467px;
     padding-right: 50px;
     padding-left: 50px;
+    padding-top: 39px;
   }
 }
 
@@ -20,21 +21,39 @@
   font-weight: 700;
   color: @text-bolder;
   text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 57px;
+    margin-bottom: 11px;
+  }
 }
 
 .popup__text {
   font-size: 15px;
   line-height: 30px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    margin-top: 0;
+  }
 }
 
-@media (min-width: @tablet-width) {
-  .popup__options-list {
-    width: 380px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+.popup__options-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -46,16 +65,20 @@
   display: inline-block;
   box-sizing: border-box;
   width: 82px;
-  height: 52px;
   border: 2px solid @slate-opacity;
-  padding-top: 18px;
+  padding-top: 14px;
   padding-bottom: 18px;
   text-transform: uppercase;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 49px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  @media (min-width: @tablet-width) {
+    width: 111px;
+  }
 }
 
 .popup__button {
@@ -67,5 +90,17 @@
   line-height: 16px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 64px;
+  margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+  }
+}
+
+.popup__option:hover + .popup__size {
+  border: 2px solid @slate-light;
+}
+
+.popup__option:active + .popup__size {
+  border: 2px solid @aqua;
 }

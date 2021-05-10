@@ -10,8 +10,21 @@
   color: @text-bolder;
 }
 
+.sub-list__link:hover {
+  color: @black-bright;
+}
+
+.sub-list__link:active {
+  color: @black-opacity-light;
+}
+
+
 .sub-list__item {
   @media (min-width: @tablet-width) {
     padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 42px;
   }
 }

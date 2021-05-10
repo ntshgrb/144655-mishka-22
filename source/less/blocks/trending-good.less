@@ -1,10 +1,38 @@
+.trending-good {
+  background-image: url("../img/images/zigzag-line-desktop.svg");
+  padding-top: 31px;
+  padding-bottom: 31px;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: contain;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 39px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 50px;
+    padding-left: 50px;
+    max-width: @container-size-l;
+    margin: 0 auto;
+    background-clip: content-box;
+    padding-bottom: 0;
+  }
+}
+
 .trending-good__title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
   color: @text-bolder;
 
   @media (min-width: @tablet-width) {
+    .subhead-title;
+    text-align: left;
+    margin-bottom: 30px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -14,84 +42,152 @@
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: 4;
+    margin-bottom: 0;
+    margin-left: 25px;
+    align-self: end;
+    z-index: 10;
   }
 }
 
 .trending-good__label {
+  margin-top: 4px;
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
   color: @aquamarine;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    text-align: right;
+    justify-self: end;
+    text-align: center;
+    line-height: 17px;
+    max-width: 100px;
+    margin-right: 13px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 6;
+    grid-row-end: 2;
+    align-self: end;
+    margin-right: 0;
+    margin-left: 45px;
+    margin-bottom: 13px;
   }
 }
 
 .trending-good__description {
   font-size: 15px;
   line-height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    margin-top: 8px;
+    margin-bottom: 31px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: 3;
+    margin-top: 38px;
+    margin-left: 25px;
+    padding-right: 22px;
+    margin-bottom: 0;
   }
 }
 
 .trending-good__details {
   margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 20px;
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: 3;
+    margin-left: 25px;
+    margin-top: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
   }
 }
 
 .trending-good__price {
+  margin-top: 24px;
+  margin-bottom: 22px;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    align-self: end;
+    margin-bottom: 0;
+  }
 }
 
 .trending-good__to-cart {
   display: block;
-  margin-bottom: 36px;
+  margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: @tablet-width) {
     justify-self: center;
+    width: 292px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    align-self: end;
+    margin-bottom: 0;
   }
 }
 
 .tranding-good__container {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 43% auto auto;
+    column-gap: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 120px 1fr auto;
+    grid-template-rows: 20% 22% 32% auto auto;
+    max-width: @container-size-l;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 102px;
   }
 }
 
@@ -106,6 +202,8 @@
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 6;
+    justify-self: end;
+    margin-top: 20px;
   }
 
   @media (min-width: @desktop-width) {

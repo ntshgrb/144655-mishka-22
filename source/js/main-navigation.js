@@ -1,5 +1,5 @@
 let mainNav = document.querySelector('.main-navigation');
-let navToggle = document.querySelector('.main-navigation__toggle');
+let navToggle = document.querySelector('.navigation__toggle');
 
 mainNav.classList.remove('main-navigation--nojs');
 
