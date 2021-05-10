@@ -12,6 +12,7 @@
 .make-order__colored-background {
   @media (min-width: @tablet-width) {
     background-color: @background-dec;
+    padding-top: 27px;
   }
 }
 
@@ -34,12 +35,14 @@
 .make-order__footnote {
   font-size: 14px;
   line-height: 16px;
-  margin-top: 11px;
+  margin-top: 16px;
   margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 30px;
+    margin-top: 9px;
+    margin-bottom: 0;
   }
 }
 
@@ -58,6 +61,8 @@
 }
 
 .make-order__bottom-wrapper {
+  max-width: @container-size-l;
+
   @media (min-width: @tablet-width) {
     padding-right: 50px;
     padding-left: 50px;
