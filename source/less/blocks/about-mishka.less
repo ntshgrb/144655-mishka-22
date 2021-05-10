@@ -1,9 +1,22 @@
+.about-mishka {
+  @media (min-width: @desktop-width) {
+    max-width: 700px;
+  }
+}
+
 .about-mishka__title {
   color: @text-bolder;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+  margin-top: 31px;
   margin-bottom: 83px;
+
+  @media (min-width: @tablet-width) {
+    .subhead-title;
+    text-align: left;
+    margin-top: 56px;
+  }
 }
 
 .about-mishka__features {

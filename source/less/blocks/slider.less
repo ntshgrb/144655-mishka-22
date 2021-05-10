@@ -1,12 +1,37 @@
+.slider__text {
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 48px;
+  }
+}
+
 .slider__author-name {
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   font-style: normal;
   color: @text-bolder;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .slider__author-id {
   font-size: 17px;
   line-height: 30px;
+  margin-top: 0;
 }

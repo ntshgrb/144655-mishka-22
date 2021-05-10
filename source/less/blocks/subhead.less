@@ -1,14 +1,14 @@
 .subhead {
   background-color: @whitesmoke;
-  margin-bottom: 30px;
+  position: relative;
 }
 
 .subhead__top-wrapper {
-  padding-top: 73px;
-  min-height: 283px;
+  padding-top: 71px;
+  min-height: 208px;
   background-image: url("../img/images/subhead.jpg");
   background-repeat: no-repeat;
-  background-position: center -10px;
+  background-position: center -19px;
 
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
@@ -17,10 +17,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 100px;
-    min-height: 445px;
+    padding-top: 90px;
+    min-height: 472px;
     background-image: url("../img/images/subhead-desktop.jpg");
-    background-position: center -77px;
+    background-position: center -66px;
 
     @media (min-resolution: 144dpi),
       (min-resolution: 1.5dppx) {
@@ -28,12 +28,21 @@
       background-size: 768px auto;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 97px;
+    background-position: center -60px;
+  }
 }
 
 .subhead__title {
   .subhead-title;
-  color: @text-bolder;
-  text-align: center;
+}
+
+.subhead__title br:first-of-type {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .subhead__item--light {
@@ -49,20 +58,31 @@
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 16px;
+  }
 }
 
 .subhead__option {
-  padding-top: 24px;
-  padding-bottom: 31px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 0 auto;
+  margin-top: 26px;
+  margin-bottom: 30px;
+  flex-basis: 0;
 }
 
 .subhead__list {
   list-style: none;
   margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 
   @media (min-width: @tablet-width) {
@@ -77,8 +97,58 @@
   }
 }
 
-.subhead__item {
+.subhead::after {
   @media (min-width: @tablet-width) {
-    flex-grow: 1;
+    position: absolute;
+    content: "";
+    height: 24px;
+    background-image: url("../img/icons/zigzag-fill-desktop-index.svg");
+    background-repeat: repeat-x;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
   }
+
+  @media (min-width: @desktop-width) {
+    background-size: cover;
+    height: 30px;
+  }
+}
+
+.subhead__item {
+  transition: all 0.2s;
+
+  @media (min-width: @tablet-width) {
+    flex-basis: 50%;
+  }
+}
+
+.subhead__icon {
+  fill: @teal;
+  opacity: 0.5;
+}
+
+.subhead__item:hover {
+  margin-top: -5px;
+  padding-bottom: 5px;
+}
+
+.subhead__link:hover .subhead__icon {
+  opacity: 0.7;
+}
+
+.subhead__item--light:hover,
+.subhead__item--light:active {
+  background-color: @light-aquamarine;
+}
+
+.subhead__item--dark:hover,
+.subhead__item--dark:active {
+  background-color: @dark-cyan;
+}
+
+.subhead__link:active .subhead__icon {
+  opacity: 0.3;
 }
