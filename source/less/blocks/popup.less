@@ -11,7 +11,7 @@
     width: 467px;
     padding-right: 50px;
     padding-left: 50px;
-    padding-top: 39px;;
+    padding-top: 39px;
   }
 }
 
@@ -74,6 +74,7 @@
   font-weight: 700;
   text-align: center;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   @media (min-width: @tablet-width) {
     width: 111px;
@@ -94,4 +95,12 @@
   @media (min-width: @tablet-width) {
     width: 350px;
   }
+}
+
+.popup__option:hover + .popup__size {
+  border: 2px solid @slate-light;
+}
+
+.popup__option:active + .popup__size {
+  border: 2px solid @aqua;
 }

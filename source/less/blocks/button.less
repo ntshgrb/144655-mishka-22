@@ -13,9 +13,20 @@
   color: @text;
   border: solid 2px @slate;
   cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
 
   @media (min-width: @tablet-width) {
     width: 230px;
     font-size: 17px;
   }
+}
+
+.button:hover {
+  background-color: @slate;
+  color: @white;
+}
+
+.button:active {
+  color: @white-opacity;
 }
