@@ -1,13 +1,21 @@
-.catalog-subhead {
+.inner-subhead {
   background-color: @background-dec;
+  min-height: 100px;
+  padding-top: 74px;
 
   @media (min-width: @tablet-width) {
+    min-height: 138px;
     background-image: url("../img/icons/zigzag-fill-desktop.svg");
     background-repeat: repeat-x;
     background-position: bottom;
   }
+
+  @media (min-width: @desktop-width) {
+    background-size: contain;
+    min-height: 173px;
+  }
 }
 
-.catalog-subhead__title {
+.inner-subhead__title {
   .subhead-title;
 }
