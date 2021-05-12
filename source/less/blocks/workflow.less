@@ -1,19 +1,5 @@
 .workflow {
-  padding-top: 21px;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "picture title"
-      "picture lead"
-      "picture button";
-  }
+  padding-bottom: 58px;
 }
 
 .workflow__title {
@@ -24,9 +10,21 @@
   font-weight: 700;
   color: @text-bolder;
   padding-left: 91px;
+  padding-top: 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding-top: 21px;
+    padding-left: 105px;
+    margin-bottom: 9px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: title;
+    padding-left: 78px;
+    padding-right: 53px;
+    margin-bottom: 0;
+    align-self: end;
   }
 }
 
@@ -37,12 +35,21 @@
   height: 22px;
   background-image: url("../img/icons/workflow-video.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
-  left: 30px;
+  left: 33px;
+  top: 21px;
+
+  @media (min-width: @tablet-width) {
+    left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 78px;
+    top: -26px;
+  }
 }
 
 .workflow__video-wrap {
-  display: inline-block;
+  display: block;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -56,6 +63,8 @@
 
 .workflow__video-prev {
   display: flex;
+  width: 100%;
+  height: auto;
 }
 
 .workflow__play-button {
@@ -63,22 +72,117 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  transition: all 0.2s ease-in-out;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.workflow__play-button:hover {
+  transform: translateX(-50%) translateY(-50%) scale(1.2);
+}
+
+.workflow__play-button:active {
+  opacity: 0.3;
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
 }
 
 .workflow__lead {
   margin-bottom: 41px;
+  padding-left: 34px;
+  padding-right: 25px;
+  padding-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+    padding-top: 0;
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: lead;
+    padding-left: 79px;
+    margin-top: 30px;
   }
 }
 
 .workflow__button {
-  margin-bottom: 90px;
+  margin-bottom: 33px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 192px;
+  line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 584px;
+    font-size: 17px;
+    margin-bottom: 44px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: button;
+    width: 230px;
+    align-self: center;
+    margin-left: 78px;
+  }
+}
+
+.workflow__wrapper {
+  border: 1px solid @lighten-grey;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 31% 39% auto;
+    grid-template-areas:
+      "picture title"
+      "picture lead"
+      "picture button";
+  }
+}
+
+.workflow__wrapper:hover {
+  box-shadow: 0 6px 10px @black-fade;
+
+  @media (min-width: @desktop-width) {
+    box-shadow: none;
+  }
+}
+
+.workflow__wrapper:active {
+  box-shadow: 0 3px 5px @black-fade;
+
+  @media (min-width: @desktop-width) {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .workflow__wrapper::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 35%;
+    z-index: -10;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .workflow__wrapper:hover::after {
+    box-shadow: 0 6px 10px @black-fade;
+  }
+
+  .workflow__wrapper:active::after {
+    box-shadow: 0 3px 5px @black-fade;
   }
 }

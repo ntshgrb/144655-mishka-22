@@ -8,6 +8,11 @@
   </head>
   <body class="page__body catalog-page">
 
+    <svg style="display: none;">
+      <symbol id="cart-icon" viewbox="0 0 20 19" width="21" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M19.227 7.238h-3.382L12.56.402C12.367 0 11.98-.1 11.594.101c-.386.2-.483.603-.29 1.005L14.3 7.238H5.508l2.995-6.132c.194-.402 0-.804-.29-1.005-.386-.202-.772 0-.966.301L3.961 7.238H.773A.777.777 0 000 8.042c0 .402.29.805.773.805h.193l.87 3.015c-.193.101-.29.302-.29.604 0 .402.29.703.676.703L3.865 19h12.27l1.643-5.83c.386 0 .676-.302.676-.704 0-.201-.096-.503-.29-.604l.87-3.015h.193A.777.777 0 0020 8.042a.777.777 0 00-.773-.804zM14.88 17.392H4.831l-1.16-4.323h12.464L14.88 17.39zm1.546-5.831H3.188l-.773-2.815h14.783l-.773 2.815z"/></symbol>
+
+    </svg>
+
     <header class="page-header container">
       <a href="index.html" class="page-header__logo">
         <img src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
@@ -46,8 +51,8 @@
     </header>
 
     <main>
-      <section class="catalog-subhead">
-        <h1 class="catalog-subhead__title container">Каталог товаров</h1>
+      <section class="inner-subhead">
+        <h1 class="inner-subhead__title container">Каталог товаров</h1>
       </section>
 
       <section class="catalog container">
@@ -55,18 +60,27 @@
 
           <li class="cards__item">
             <article class="card">
-              <a href="#">
-                <img class="card__image" src="img/images/catalog/hare.jpg" width="260" height="195" alt="Вязаный заяц в синем костюме">
+              <a class="card__picture-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/images/catalog/hare-desktop.webp 1x, img/images/catalog/hare-desktop@2x.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/images/catalog/hare-tablet.webp 1x, img/images/catalog/hare-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/images/catalog/hare.webp 1x, img/images/catalog/hare@2x.webp 2x">
+                  <source media="(min-width: 1150px" srcset="img/images/catalog/hare-desktop.jpg 1x, img/images/catalog/hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/images/catalog/hare-tablet.jpg 1x, img/images/catalog/hare-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/images/catalog/hare.jpg" scrset="img/images/catalog/hare@2x.jpg 2x" width="260" height="195" alt="Вязаный заяц в синем костюме">
+                </picture>
               </a>
               <div class="card__wrap">
-                <a href="#">
+                <a class="card__title-link" href="#">
                   <h2 class="card__title">Зайчик-попрыгайчик</h2>
                 </a>
                 <p class="card__description">Рост 30 см, вес 200 г</p>
                 <div class="card__footer">
                   <p class="card__price">1 200 руб.</p>
                   <button class="card__button" type="button">
-                    <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
+                    <svg class="card__cart-icon" width="20" height="19" alt="Добавить в корзину">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -75,18 +89,27 @@
 
           <li class="cards__item">
             <article class="card">
-              <a href="#">
-                <img class="card__image" src="img/images/catalog/basket.jpg" width="260" height="195" alt="Бело-оранжевая корзинка">
+              <a class="card__picture-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/images/catalog/basket-desktop.webp 1x, img/images/catalog/basket-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/images/catalog/basket-tablet.webp 1x, img/images/catalog/basket-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/images/catalog/basket.webp 1x, img/images/catalog/basket@2x.webp">
+                  <source media="(min-width: 1150px)" srcset="img/images/catalog/basket-desktop.jpg 1x, img/images/catalog/basket-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/images/catalog/basket-tablet.jpg 1x, img/images/catalog/basket-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/images/catalog/basket.jpg" srcset="img/images/catalog/basket@2x.jpg 2x" width="260" height="195" alt="Бело-оранжевая корзинка">
+                </picture>
               </a>
               <div class="card__wrap">
-                <a href="#">
+                <a class="card__title-link" href="#">
                   <h2 class="card__title">Корзинка для белья</h2>
                 </a>
                 <p class="card__description">Диаметр 15 см, высота 10 см</p>
                 <div class="card__footer">
                   <p class="card__price">690 руб.</p>
                   <button class="card__button" type="button">
-                    <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
+                    <svg class="card__cart-icon" width="20" height="19" alt="Добавить в корзину">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -95,18 +118,27 @@
 
           <li class="cards__item">
             <article class="card">
-              <a href="#">
-                <img class="card__image" src="img/images/catalog/big-toy-basket.jpg" width="260" height="195" alt="Бело-зеленая корзина с мягкими игрушками">
+              <a class="card__picture-link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/images/catalog/toy-basket-desktop.webp 1x, img/images/catalog/toy-basket-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/images/catalog/toy-basket-tablet.webp 1x, img/images/catalog/toy-basket-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/images/catalog/toy-basket.webp 1x, img/images/catalog/toy-basket@2x.webp 2x">
+                  <source media="(min-width: 1150px)" srcset="img/images/catalog/toy-basket-desktop.jpg 1x, img/images/catalog/toy-basket-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/images/catalog/toy-basket-tablet.jpg 1x, img/images/catalog/toy-basket-tablet@2x.jpg 2x">
+                  <img class="card__image" src="img/images/catalog/toy-basket.jpg" srcset="img/images/catalog/toy-basket@2x.jpg 2x" width="260" height="195" alt="Бело-зеленая корзина с мягкими игрушками">
+                </picture>
               </a>
               <div class="card__wrap">
-                <a href="#">
-                  <h2 class="card__title">Большая корзинка для игрушек</h2>
+                <a class="card__title-link" href="#">
+                  <h2 class="card__title">Большая корзинка<br> для игрушек</h2>
                 </a>
                 <p class="card__description">Диаметр 30 см, высота 30 см</p>
                 <div class="card__footer">
                   <p class="card__price">1 500 руб.</p>
                   <button class="card__button" type="button">
-                    <img src="img/icons/catalog-cart.svg" width="20" height="19" alt="Добавить в корзину">
+                    <svg class="card__cart-icon" width="20" height="19" alt="Добавить в корзину">
+                      <use xlink:href="#cart-icon"></use>
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -116,15 +148,21 @@
       </section>
 
       <section class="workflow container">
-        <h2 class="workflow__title">Процесс производства</h2>
-        <div class="workflow__video-wrap">
-          <img class="workflow__video-prev" src="img/images/catalog/video-preview.jpg" alt="Превью видео: корзинка цвета тиффани"  width="260" height="150">
-          <button class="workflow__play-button" type="button">
-            <img src="img/images/catalog/play.svg" alt="Кнопка начала проигрывания видео">
-          </button>
+        <div class="workflow__wrapper">
+          <h2 class="workflow__title">Процесс производства</h2>
+          <div class="workflow__video-wrap">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/images/catalog/video-preview-desktop.jpg 1x, img/images/catalog/video-preview-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/images/catalog/video-preview-tablet.jpg 1x, img/images/catalog/video-preview-tablet@2x.jpg 2x">
+              <img class="workflow__video-prev" src="img/images/catalog/video-preview.jpg" srcset="img/images/catalog/video-preview@2x.jpg 2x" alt="Превью видео: корзинка цвета тиффани"  width="260" height="150">
+            </picture>
+            <button class="workflow__play-button" type="button">
+              <img src="img/images/catalog/play.svg" alt="Кнопка начала проигрывания видео">
+            </button>
+          </div>
+          <p class="workflow__lead">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="workflow__button button" href="#">Сделать заказ</a>
         </div>
-        <p class="workflow__lead">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="workflow__button button" href="#">Сделать заказ</a>
       </section>
     </main>
 
@@ -148,7 +186,7 @@
       </div>
     </footer>
 
-    <section class="popup container">
+    <section class="popup container" style="display: none;">
       <h2 class="popup__title">Добавить в корзину</h2>
       <form method="post" action="https://echo.htmlacademy.ru" >
         <p class="popup__text">Выберите размер:</p>
