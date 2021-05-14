@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 143px;
+    min-height: 144px;
   }
 }
 
@@ -17,4 +17,17 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+}
+
+.page-footer__logo-icon {
+  fill: @black;
+}
+
+.page-footer__logo:hover .page-footer__logo-icon {
+  fill: @dark-cyan;
+}
+
+.page-footer__logo:active .page-footer__logo-icon {
+  fill: @dark-cyan;
+  opacity: 0.3;
 }

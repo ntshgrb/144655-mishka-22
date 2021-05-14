@@ -1,14 +1,30 @@
 .socials {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid @grey;
-  padding-bottom: 30px;
+  padding-bottom: 19px;
   padding-top: 25px;
-  padding-left: 0;
+  padding-left: 59px;
+  padding-right: 59px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     border: none;
+    min-width: 141px;
   }
+}
+
+.socials__icon {
+  fill: @ink;
+}
+
+.socials__link:hover .socials__icon {
+  fill: @dark-cyan;
+}
+
+.socials__link:active .socials__icon {
+  fill: @dark-cyan;
+  opacity: 0.3;
 }
