@@ -74,14 +74,15 @@
 }
 
 .main-navigation__free-delivery {
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: 400;
-  color: @text;
-  margin-top: 20px;
+  display: none;
 
-  @media (max-width: @mobile-width-only) {
-    display: none;
+  @media (min-width: @tablet-width) {
+    display: block;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: @text;
+    margin-top: 20px;
   }
 
   @media (min-width: @tablet-width) {
