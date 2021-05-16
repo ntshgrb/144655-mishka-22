@@ -52,8 +52,8 @@ const optimizeImages = () => {
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
       ]))
-  .pipe(gulp.dest("build/img"))
- }
+    .pipe(gulp.dest("build/img"))
+    }
 
 exports.optimizeImages = optimizeImages;
 
@@ -70,7 +70,8 @@ const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
- }
+  }
+
 exports.createWebp = createWebp;
 
 // Scripts
