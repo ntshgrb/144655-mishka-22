@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicons/favicon16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="favicons/favicon32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="favicons/favicon152.svg" sizes="any" type="image/svg+xml">
-    <link rel="favicons/apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
@@ -40,12 +44,12 @@
             </picture>
           </a>
         </div>
-        <div class="navigation__button-wrapper">
-          <button class="navigation__toggle" type="button" aria-label="Меню">
-            <span class="navigation__toggle-icon"></span>
-          </button>
-        </div>
         <nav class="navigation__list main-navigation main-navigation--closed">
+          <div class="navigation__button-wrapper main-navigation__toggle">
+            <button class="navigation__toggle" type="button" aria-label="Меню">
+              <span class="navigation__toggle-icon"></span>
+            </button>
+          </div>
           <ul class="main-navigation__site site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">Каталог товаров</a>
@@ -134,7 +138,7 @@
             </picture>
           </div>
           <p class="trending-good__price">Цена: 990 руб.</p>
-          <button class="trending-good__to-cart button" type="button">Заказать</button>
+          <a class="trending-good__to-cart button" type="button" href="popup.html">Заказать</a>
         </div>
       </section>
       <section class="about-mishka container">
@@ -283,7 +287,7 @@
           <label class="popup__size" for="size-l">l</label>
         </div>
       </form>
-      <a class="popup__button button" type="submit">Добавить</a>
+      <a class="popup__button button">Добавить</a>
     </section>
     <script src="js/main-navigation.min.js"></script>
     <script src="js/main-navigation-toggle.min.js"></script>
