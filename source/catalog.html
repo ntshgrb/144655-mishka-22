@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicons/favicon16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="favicons/favicon32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="favicons/favicon152.svg" sizes="any" type="image/svg+xml">
@@ -25,14 +25,14 @@
     <header class="page-header page-header--inner">
       <div class="navigation">
         <div class="navigation__logo-wrapper">
-        <a class="navigation__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/icons/mishka-logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/icons/mishka-logo-tablet.svg">
-            <img class="navigation__logo-image" src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
-          </picture>
-        </a>
-      </div>
+          <a class="navigation__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/icons/mishka-logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/icons/mishka-logo-tablet.svg">
+              <img class="navigation__logo-image" src="img/icons/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+            </picture>
+          </a>
+        </div>
         <div class="navigation__button-wrapper">
           <button class="navigation__toggle" type="button" aria-label="Меню">
             <span class="navigation__toggle-icon"></span>
@@ -187,7 +187,6 @@
         </div>
       </section>
     </main>
-
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo" href="#">
@@ -228,7 +227,6 @@
         </div>
       </div>
     </footer>
-
     <section class="popup popup--closed">
       <h2 class="popup__title">Добавить в&nbsp;корзину</h2>
       <form class="popup__form" method="post" action="https://echo.htmlacademy.ru" >
@@ -244,5 +242,7 @@
       </form>
       <a class="popup__button button" type="submit">Добавить</a>
     </section>
-</body>
+    <script src="js/main-navigation.min.js"></script>
+    <script src="js/main-navigation-toggle.min.js"></script>
+  </body>
 </html>
