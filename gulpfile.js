@@ -135,12 +135,14 @@ const server = (done) => {
 exports.server = server;
 
 // Reload
+
 const reload =(done) => {
   sync.reload();
   done();
 }
 
 // Clean
+
 const clean = () => {
  return del("build");
 };
