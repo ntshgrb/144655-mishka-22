@@ -13,22 +13,18 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .main-navigation--closed .main-navigation {
-    &__site,
-    &__user {
-      display: none;
-    }
-  }
-
-  .main-navigation--nojs .navigation__toggle-wrapper {
+  .main-navigation--closed .main-navigation__site,
+  .main-navigation--closed .main-navigation__user {
     display: none;
   }
 
-  .main-navigation--nojs .main-navigation {
-    &__site,
-    &__user {
-      display: block;
-    }
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation--nojs .main-navigation__site,
+  .main-navigation--nojs .main-navigation__user {
+    display: block;
   }
 
   .main-navigation--opened {
@@ -36,6 +32,10 @@
     width: 100%;
     background-color: @white;
     z-index: 20;
+  }
+
+  .main-navigation--opened .main-navigation__toggle {
+    top: -53px;
   }
 }
 
