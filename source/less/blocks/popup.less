@@ -5,7 +5,7 @@
   transform: translate(-50%, -50%);
   width: 260px;
   background-color: @white;
-  z-index: 15;
+  z-index: 100;
   padding-top: 30px;
   padding-right: 30px;
   padding-left: 30px;
@@ -112,5 +112,19 @@
 }
 
 .popup--closed {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-color: @white-light;
+  top: 0;
+  z-index: 99;
+}
+
+.popup--closed ~ .overlay {
   display: none;
 }

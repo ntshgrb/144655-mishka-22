@@ -5,9 +5,7 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicons/favicon16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="favicons/favicon32.png" sizes="32x32" type="image/png">
@@ -231,20 +229,23 @@
         </div>
       </div>
     </footer>
-    <section class="popup popup--closed">
-      <h2 class="popup__title">Добавить в&nbsp;корзину</h2>
-      <form class="popup__form" method="post" action="https://echo.htmlacademy.ru" >
-        <p class="popup__text">Выберите размер:</p>
-        <div class="popup__options-list">
-          <input class="popup__option" type="radio" name="size" id="size-s" value="S">
-          <label class="popup__size" for="size-s">s</label>
-          <input class="popup__option" type="radio" name="size" id="size-m" value="M">
-          <label class="popup__size" for="size-m">m</label>
-          <input class="popup__option" type="radio" name="size" id="size-l" value="L">
-          <label class="popup__size" for="size-l">l</label>
-        </div>
-      </form>
-      <a class="popup__button button">Добавить</a>
+    <section>
+      <div class="popup popup--closed">
+        <h2 class="popup__title">Добавить в&nbsp;корзину</h2>
+        <form class="popup__form" method="post" action="https://echo.htmlacademy.ru" >
+          <p class="popup__text">Выберите размер:</p>
+          <div class="popup__options-list">
+            <input class="popup__option" type="radio" name="size" id="size-s" value="S">
+            <label class="popup__size" for="size-s">s</label>
+            <input class="popup__option" type="radio" name="size" id="size-m" value="M">
+            <label class="popup__size" for="size-m">m</label>
+            <input class="popup__option" type="radio" name="size" id="size-l" value="L">
+            <label class="popup__size" for="size-l">l</label>
+          </div>
+        </form>
+        <a class="popup__button button">Добавить</a>
+      </div>
+      <div class="overlay"></div>
     </section>
     <script src="js/main-navigation.min.js"></script>
     <script src="js/main-navigation-toggle.min.js"></script>
