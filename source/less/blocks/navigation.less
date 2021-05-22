@@ -103,21 +103,22 @@
     position: absolute;
     content: "";
     height: 2px;
-    width: 100%;
+    width: 26px;
     background-color: @ink;
-    top: 0;
     transition: all, 0.3s;
   }
 
   &::after {
     transform: rotate(45deg);
     transform-origin: 0;
-    left: 3px;
+    left: 2px;
+    top: 0;
   }
 
   &::before {
     transform: rotate(-45deg);
-    transform-origin: right;
-    right: 3px;
+    transform-origin: 0;
+    left: 1px;
+    top: 19px;
   }
 }

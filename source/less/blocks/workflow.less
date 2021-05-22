@@ -2,7 +2,7 @@
   padding-bottom: 58px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 64px;
+    padding-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
@@ -30,6 +30,7 @@
   @media (min-width: @desktop-width) {
     grid-area: title;
     padding-left: 78px;
+    padding-top: 52px;
     padding-right: 53px;
     margin-bottom: 0;
     align-self: end;
@@ -52,7 +53,7 @@
 
   @media (min-width: @desktop-width) {
     left: 78px;
-    top: -26px;
+    top: 3px;
   }
 }
 
@@ -84,6 +85,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: @desktop-width) {
+    top: 230px;
+  }
 }
 
 .workflow__play-button:hover {
@@ -96,7 +101,7 @@
 }
 
 .workflow__lead {
-  margin-bottom: 45px;
+  margin-bottom: 44px;
   padding-left: 34px;
   padding-right: 25px;
   padding-top: 24px;
@@ -113,7 +118,8 @@
   @media (min-width: @desktop-width) {
     grid-area: lead;
     padding-left: 79px;
-    margin-top: 30px;
+    margin-top: 29px;
+    margin-bottom: 27px;
   }
 }
 
@@ -133,8 +139,8 @@
 
   @media (min-width: @desktop-width) {
     grid-area: button;
+    align-self: start;
     width: 230px;
-    align-self: center;
     margin-left: 78px;
     margin-bottom: 35px;
   }
@@ -153,7 +159,6 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 31% 39% auto;
     grid-template-areas:
       "picture title"
       "picture lead"

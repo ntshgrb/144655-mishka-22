@@ -42,7 +42,7 @@
             </picture>
           </a>
         </div>
-        <nav class="navigation__list main-navigation main-navigation--closed">
+        <nav class="navigation__list main-navigation main-navigation--closed main-navigation--nojs">
           <div class="navigation__button-wrapper main-navigation__toggle">
             <button class="navigation__toggle" type="button" aria-label="Меню">
               <span class="navigation__toggle-icon"></span>
@@ -143,37 +143,37 @@
         <h2 class="visually-hidden">Информация об интернет-магазине Мишка</h2>
         <h3 class="about-mishka__title">Коротко о нас:</h3>
         <ul class="about-mishka__features features">
-          <li class="features__item">
+          <li class="features__item features__material">
             <svg class="features__icon-material" width="33" height="38">
               <use xlink:href="#material"></use>
             </svg>
             <span class="features__point">Экологически<br>чистые материалы</span>
           </li>
-          <li class="features__item">
+          <li class="features__item features__price">
             <svg class="features__icon-price" width="47" height="27">
               <use xlink:href="#price"></use>
             </svg>
             <span class="features__point">Скандинавский стиль<br>по российской цене</span>
           </li>
-          <li class="features__item">
+          <li class="features__item features__likes">
             <svg class="features__icon-likes" width="34" height="27">
               <use xlink:href="#likes"></use>
             </svg>
             <span class="features__point">Увеличивает лайки<br>на фотографиях</span>
           </li>
-          <li class="features__item">
+          <li class="features__item features__handmade">
             <svg class="features__icon-handmade" width="35" height="34">
               <use xlink:href="#handmade"></use>
             </svg>
             <span class="features__point">Связано вручную<br>с любовью и умилением</span>
           </li>
-          <li class="features__item">
+          <li class="features__item features__support">
             <svg class="features__icon-support" width="55" height="23">
               <use xlink:href="#support"></use>
             </svg>
             <span class="features__point">Поддержка отечественного производителя</span>
           </li>
-          <li class="features__item">
+          <li class="features__item features__giftbox">
             <svg class="features__icon-giftbox" width="33" height="32">
               <use xlink:href="#giftbox"></use>
             </svg>
@@ -225,16 +225,14 @@
           <dt class="contacts__title">адрес:</dt>
           <dd class="contacts__text">г. Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная д.&nbsp;19/8,&nbsp;офис&nbsp;101</dd>
         </dl>
-
         <div class="contacts__map-container">
-          <!-- <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59568961798!2d30.32198524385685!3d59.93885084043109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1619630674532!5m2!1sru!2sru" width="320" height="454" style="border: 0;" allowfullscreen="" loading="lazy"></iframe> -->
+          <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59568961798!2d30.32198524385685!3d59.93885084043109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1619630674532!5m2!1sru!2sru" width="320" height="454" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
           <picture>
             <source media="(min-width: 1150px)" srcset="img/images/map-desktop.png 1x, img/images/map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/images/map-tablet.png 1x, img/images/map-tablet@2x.png 2x">
             <img class="contacts__map" src="img/images/map.png" srcset="img/images/map@2x.png 2x" alt="Расположение магазина Мишка на карте" width="320" height="454">
           </picture>
         </div>
-
         <a class="contacts__write-message button" href="#">Напишите нам</a>
       </section>
     </main>
